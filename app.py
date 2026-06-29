@@ -34,6 +34,8 @@ import os
 import time
 
 app = Flask(__name__)
+UPLOAD_FOLDER= "uploads"
+app.config["UPLOAD_FOLDER"]=UPLOAD_FOLDER
 
 app.secret_key = os.getenv(
     "SECRET_KEY",
@@ -266,6 +268,7 @@ def upload():
         app.config["UPLOAD_FOLDER"],
         file.filename
     )
+    os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
     file.save(filepath)
 
