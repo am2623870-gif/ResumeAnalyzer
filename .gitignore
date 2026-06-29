@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Environment Variables
+.env
+
+# Database
+resume_analyzer.db
+*.db
+
+# Uploads
+uploads/
+*.pdf
+
+# IDE Files
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Cache
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Build Files
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
