@@ -35,7 +35,10 @@ import time
 
 app = Flask(__name__)
 
-app.secret_key = "resume_analyzer_secret"
+app.secret_key = os.getenv(
+    "SECRET_KEY",
+    "resume_analyzer_secret"
+)
 
 init_db()
 create_users_table()
